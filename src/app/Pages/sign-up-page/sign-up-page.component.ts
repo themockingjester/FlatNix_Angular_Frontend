@@ -12,7 +12,7 @@ export class SignUpPageComponent {
         "email": (<HTMLInputElement>document.getElementById("emailToRegister")).value,
         "password": (<HTMLInputElement>document.getElementById("passwordToRegister")).value,
         "age": (<HTMLInputElement>document.getElementById("ageToRegister")).value
-      }, withCredentials: true
+      }
     }).then((response) => {
       if (response.data.success == true && response.data.statusCode == 200) {
         window.location.href = "/login"
