@@ -8,7 +8,7 @@ import axios from 'axios';
 })
 export class LoginPageComponent {
   login() {
-    axios.post(`http://localhost:4002/apis/auth/login`, {}, {
+    axios.post(`http://localhost:4050/apis/auth/login`, {}, {
       headers: {
         "email": (<HTMLInputElement>document.getElementById("emailToLogin")).value,
         "password": (<HTMLInputElement>document.getElementById("passwordToLogin")).value

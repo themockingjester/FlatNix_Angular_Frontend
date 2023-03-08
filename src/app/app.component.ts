@@ -8,7 +8,7 @@ import axios from 'axios';
 export class AppComponent {
   title = 'FlatNix_Angular_Frontend';
   logout() {
-    axios.post(`http://localhost:4002/apis/auth/logout`, {}, { withCredentials: true }).then((response) => {
+    axios.post(`http://localhost:4050/apis/auth/logout`, {}, { withCredentials: true }).then((response) => {
       if (response.data.success == true && response.data.statusCode == 200) {
         alert(response.data.message)
         window.location.href = "/login"
