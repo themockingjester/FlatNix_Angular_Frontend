@@ -1,0 +1,41 @@
+<div class="row" style="width: fit-content;margin: auto;">
+    <div class="col">
+        <div class="card text-white bg-success"
+            style=" margin-top: 2rem;margin-bottom: 2rem;margin-left: auto;margin-right: auto;">
+            <div class="card-body">
+                <!-- <img src={{product.images[0]}}> -->
+                <h3 class="card-title" style="font-weight: bolder;text-align: center;">{{media.title}}
+                </h3>
+                <br>
+                <br>
+                Genre: <span class="badge bg-dark">{{media.type}}</span>
+                <p class="card-text"><span>Country</span>: {{media.country}}</p>
+
+                <p class="card-text"><span>Director</span>: <span style="font-size:x-small;">{{media.director}}</span>
+                </p>
+                <p class="card-text"><span>Cast</span>: <span style="font-size: small;">{{media.cast}}</span>
+                </p>
+                <p class="card-text"><span>Date Released</span>: <span
+                        style="font-size: small;">{{media.release_year}}</span>
+                </p>
+                <p class="card-text"><span>Date Added:</span>: <span
+                        style="font-size: small;">{{media.date_added}}</span>
+                </p>
+                <p class="card-text"><span>Rating</span>: <span style="font-size: small;">{{media.rating}}</span>
+                </p>
+                <p class="card-text"><span>Listed In</span>: <span style="font-size: small;">{{media.listed_in}}</span>
+                </p>
+                <p class="card-text"><span>Description</span>: <span
+                        style="font-size: small;">{{media.description}}</span>
+                </p>
+
+                <br>
+                <!-- <button (click)="toggleStatus(product.id)" class="btn {{product.status == 'ACTIVE'? 'btn btn-danger':
+                    'btn btn-success'}}">Make {{product.status == 'ACTIVE'? 'INACTIVE':
+                        'ACTIVE'}}</button> -->
+
+            </div>
+
+        </div>
+    </div>
+</div>

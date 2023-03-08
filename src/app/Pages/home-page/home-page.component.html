@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row"
+        style="width: fit-content; margin-left: auto;margin-right: auto;margin-top: 2rem;margin-bottom: 2rem;">
+        <div class="col">
+            <select id="filter">
+                <option value="All">All</option>
+                <option value="Movie">Movie</option>
+                <option value="TV Show">TV Show</option>
+            </select>
+            <input placeholder="Search your query here" id="searchedText">
+            &nbsp;
+            <button class="btn btn-warning" (click)="search()">Search</button>
+        </div>
+    </div>
+    <h4 style="font-weight: bolder;margin-top: 8rem;text-align: center;">Some Recommendations </h4>
+    <div class="row">
+        <div class="col-2">
+            <div class="spinner-border text-dark m-5" role="status" style="display:{{loading == true? '' : 'none'}}">
+                <span class="visually-hidden"></span>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="row">
+
+                <div class="col-5" *ngFor="let med of media; let index = index"
+                    style="margin-left: 1rem;margin-right: 1rem;">
+                    <div class="card text-white bg-success" style=" margin-top: 2rem;margin-bottom: 2rem;"
+                        (click)="openMedia(med.id)">
+                        <div class="card-body">
+                            <!-- <img src={{product.images[0]}}> -->
+                            <h5 class="card-title">{{med.title}}
+                            </h5>
+                            <br>
+                            <br>
+                            Genre: <span class="badge bg-dark">{{med.type}}</span>
+                            <p class="card-text"><span>Country</span>: {{med.country}}</p>
+
+                            <p class="card-text"><span>Director</span>: <span
+                                    style="font-size:x-small;">{{med.director}}</span>
+                            </p>
+                            <p class="card-text"><span>Cast</span>: <span style="font-size: small;">{{med.cast}}</span>
+                            </p>
+
+                            <br>
+                            <!-- <button (click)="toggleStatus(product.id)" class="btn {{product.status == 'ACTIVE'? 'btn btn-danger':
+                            'btn btn-success'}}">Make {{product.status == 'ACTIVE'? 'INACTIVE':
+                                'ACTIVE'}}</button> -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,3 +1,11 @@
+
+##### Note: For using this project you must have Angular Installed on your system
+This project is using Angular Version: 15.2.1
+While NOdeJS Version is 16.18.0
+## How to test this project
+1) After cloning the project please make sure to run the command `npm install`
+2) Now to run the project you need to run a command `ng serve --open `
+3) Finally the project will run properly but it might be possible that on chrome you face issue so try to use firefox.
 # FlatNixAngularFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
