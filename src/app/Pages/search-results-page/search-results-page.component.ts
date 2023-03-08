@@ -20,7 +20,7 @@ export class SearchResultsPageComponent {
   searchData(query: string, filter: string, pageNo: number) {
     try {
       this.loading = true
-      axios.get(`http://localhost:4050/apis/media/search?query=${query}&type=${filter}&pageNo=${pageNo}`, { withCredentials: true }).then((response) => {
+      axios.get(`http://fletnix.teckturt.co.in/site/apis/media/search?query=${query}&type=${filter}&pageNo=${pageNo}`, { withCredentials: true }).then((response) => {
         if (response.data.success == true && response.data.statusCode == 200) {
           this.loading = false;
           if (response.data.data.data.length == 0) {

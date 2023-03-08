@@ -25,7 +25,7 @@ export class HomePageComponent {
   searchData(query: string, filter: string) {
     try {
       this.loading = true
-      axios.get(`http://localhost:4050/apis/media/search?query=${query}&type=${filter}`, { withCredentials: true }).then((response) => {
+      axios.get(`https://fletnix.teckturt.co.in/site/apis/media/search?query=${query}&type=${filter}`, { withCredentials: true }).then((response) => {
         if (response.data.success == true && response.data.statusCode == 200) {
           this.loading = false;
           if (response.data.data.data.length == 0) {

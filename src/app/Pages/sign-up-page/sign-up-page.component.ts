@@ -7,7 +7,7 @@ import axios from 'axios';
 })
 export class SignUpPageComponent {
   register() {
-    axios.put(`http://localhost:4050/apis/user/registerUser`, {}, {
+    axios.put(`http://fletnix.teckturt.co.in/site/apis/user/registerUser`, {}, {
       headers: {
         "email": (<HTMLInputElement>document.getElementById("emailToRegister")).value,
         "password": (<HTMLInputElement>document.getElementById("passwordToRegister")).value,
