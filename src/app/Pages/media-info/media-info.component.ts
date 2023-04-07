@@ -30,7 +30,7 @@ export class MediaInfoComponent {
       .subscribe(params => {
 
         this.mediaId = params['mediaId']
-        axios.get(`https://fletnix.teckturt.co.in/site/apis/media/getMediaData?mediaId=${params['mediaId']}`, { withCredentials: true }).then((response) => {
+        axios.get(`http://localhost:4050/apis/media/getMediaData?mediaId=${params['mediaId']}`, { withCredentials: true }).then((response) => {
           if (response.data.success == true && response.data.statusCode == 200) {
             if (response.data.data.data.length == 0) {
               alert(`No data found`)
